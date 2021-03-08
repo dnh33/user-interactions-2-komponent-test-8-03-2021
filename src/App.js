@@ -1,12 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { Router } from '@reach/router'
+import './App.css'
+import Navbar from './components/Navbar'
+import Component_1 from './views/Component_1'
+import Component_2 from './views/Component_2'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       
-      </header>
+      <Navbar />
+      <Router>
+        <Component_1 path="/" />
+        <Component_2 path="/component_2" />
+      </Router>
     </div>
   );
 }
